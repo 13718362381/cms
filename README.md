@@ -1,5 +1,4 @@
-##安装 nodejs             
-(>12.0)
+##安装 nodejs             (>12.0)
 
 安装 nodejs源 ： npm config set registry http://registry.npm.taobao.org
 
