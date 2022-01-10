@@ -4,7 +4,7 @@
 const env = import.meta.env.MODE || 'dev';
 const EnvConfig = {
     dev: {
-        baseApi: 'localhost:8080'
+        baseApi: 'http://localhost:8080'
     },
     test: {
         baseApi: 'test.xxx.com/api'

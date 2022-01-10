@@ -22,7 +22,6 @@ service.interceptors.request.use((req) => {
     if (!headers.Authorization) {
         headers.Authorization = "uuid-Authorization";
     }
-    headers.Content-Type = 'application/json;charset=UTF-8';
     return req;
 })
 
