@@ -5,11 +5,14 @@ import router from './router'
 import ElementPlus from 'element-plus'
 import 'element-plus/theme-chalk/index.css'
 
-import axios from 'axios'
+import request from './utils/request'
 
 // 环境变量可以修改 package.json下scripts.dev值。 默认"vite"; 开发环境 "vite --mode dev".
-console.log("环境变量", import.meta.env)
+// console.log("环境变量", import.meta.env)
 const app = createApp(App);
+
+//全局挂载变量
+app.config.globalProperties.$request = request
 
 app.use(router)
     .use(ElementPlus)

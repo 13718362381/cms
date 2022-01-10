@@ -6,6 +6,18 @@
 <script>
 export default {
   name: 'login',
+  mounted () {
+    this.$request.post('/office/findByPage',
+      {
+        name: 'jack',
+        page: 1,
+        pageSize: 10
+      },
+      { mock: true, loading: true }
+    ).then((resp) => {
+      console.log(resp)
+    })
+  },
   methods: {
     goHome () {
       this.$router.push('/welcome')
