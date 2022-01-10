@@ -7,16 +7,18 @@ const EnvConfig = {
         baseApi: 'http://localhost:8080'
     },
     test: {
-        baseApi: 'test.xxx.com/api'
+        baseApi: 'http://test.xxx.com/api'
     },
     prep: {
-        baseApi: 'prep.xxx.com/api'
+        baseApi: 'http://prep.xxx.com/api'
     },
     pro: {
-        baseApi: 'www.baidu.com/api'
+        baseApi: 'http://www.baidu.com/api'
     }
 }
 export default {
     env,
+    // localStorage 空间名
+    namespace: lcms,
     ...EnvConfig[env]
 }

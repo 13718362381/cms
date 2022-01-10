@@ -22,13 +22,14 @@ service.interceptors.request.use((req) => {
     if (!headers.Authorization) {
         headers.Authorization = "uuid-Authorization";
     }
+    headers.post['Content-Type'] = 'application/json;charset=UTF-8'
     return req;
 })
 
 // 响应拦截
 service.interceptors.response.use((resp) => {
     const { code, data, message } = resp.data;
-    if (code == 2000) {
+    if (code == 0) {
         return data;
     }
     else if (data == null || code == null) {
@@ -69,7 +70,6 @@ function request (options) {
     if (options.method.toLowerCase() == 'get') {
         options.params = options.data;
     }
-    console.log(options);
     return service(options)
 }
 
