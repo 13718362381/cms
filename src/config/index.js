@@ -19,6 +19,6 @@ const EnvConfig = {
 export default {
     env,
     // localStorage 空间名
-    namespace: lcms,
+    namespace: 'lcms',
     ...EnvConfig[env]
 }
